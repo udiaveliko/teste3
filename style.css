@@ -1,0 +1,181 @@
+/* Dark Mode Theme & Card Layout */
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1F1F1F; /* Cor do cartão para consistência */
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Centralizar conteúdo do header */
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+}
+
+.time-display {
+    color: #BBBBBB;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.park-selector label {
+    margin-right: 8px;
+    color: #BBBBBB;
+}
+
+.park-selector select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+main {
+    max-width: 700px; /* Limitar largura para melhor leitura em desktop */
+    margin: 0 auto; /* Centralizar main */
+}
+
+.error-message {
+    color: #FF6B6B; /* Vermelho claro para erros */
+    background-color: #1F1F1F;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.attractions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.attraction-card {
+    background-color: #1F1F1F;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out; /* Animação suave */
+}
+
+.attraction-card:hover {
+    transform: translateY(-2px); /* Leve elevação no hover */
+}
+
+.attraction-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Imagem circular */
+    margin-right: 16px;
+    object-fit: cover; /* Para a imagem cobrir o espaço */
+    background-color: #333; /* Placeholder background */
+}
+
+.attraction-info {
+    flex-grow: 1; /* Ocupa o espaço restante */
+}
+
+.attraction-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0 0 4px 0;
+    color: #FFFFFF;
+}
+
+.park-name {
+    font-size: 0.9em;
+    color: #BBBBBB;
+    margin: 0;
+}
+
+.wait-time-container { /* Renomeado de .wait-time para evitar conflito */
+    text-align: right;
+    min-width: 80px; /* Espaço mínimo para o tempo */
+}
+
+.minutes {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #FFFFFF; /* Branco por padrão */
+    display: block; /* Para ficar acima do ícone */
+}
+
+.status-closed,
+.status-operating,
+.status-unknown {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #BBBBBB;
+    display: block;
+}
+
+.lowest-time-indicator { /* Renomeado de .lowest-time */
+    font-size: 1.2em; /* Tamanho do ícone */
+    color: #00FF00; /* Verde neon */
+    display: inline-block; /* Para ficar ao lado se necessário, mas a estrutura HTML o coloca abaixo */
+    margin-top: 4px;
+}
+
+/* Estilo específico para tempo de espera quando for o menor do dia */
+.wait-time-container.lowest .minutes {
+    color: #00FF00; /* Verde neon */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    color: #BBBBBB;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: #00A0FF; /* Azul claro para links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    header {
+        padding: 12px;
+    }
+    .attraction-card {
+        padding: 12px;
+    }
+    .attraction-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 12px;
+    }
+    .attraction-name {
+        font-size: 1.1em;
+    }
+    .minutes {
+        font-size: 1.2em;
+    }
+}
+

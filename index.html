@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempos de Fila - Parques Temáticos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="park-name">Disney Queue Times</h1>
+        <p id="current-time" class="time-display">--:--:--</p>
+        <div class="park-selector">
+            <label for="park-select">Escolha o Parque:</label>
+            <select id="park-select">
+                <option value="Magic Kingdom">Magic Kingdom</option>
+                <option value="Epcot">Epcot</option>
+                <option value="Hollywood Studios">Hollywood Studios</option>
+                <option value="Animal Kingdom">Animal Kingdom</option>
+                <option value="Universal Studios Florida">Universal Studios Florida</option>
+                <option value="Islands of Adventure">Islands of Adventure</option>
+                <option value="Epic Universe">Epic Universe</option>
+                <option value="Sea World Orlando">Sea World Orlando</option>
+                <option value="Busch Gardens Tampa">Busch Gardens Tampa</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <div id="error-message" class="error-message"></div>
+        <div id="attractions-container">
+            <div id="loading-message">Carregando tempos de fila...</div>
+            <div id="attractions-list" class="attractions-list">
+                <!-- Atrações serão inseridas aqui pelo JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Dados fornecidos por <a href="https://www.waitingtimes.app" target="_blank" rel="noopener noreferrer">Waitingtimes.APP</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
